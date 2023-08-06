@@ -1,0 +1,232 @@
+body {
+    box-sizing: border-box;
+    margin: lem;
+    font-style: -webkit-linear-gradient(#eee, #333);
+    font-family: "Pangolin", sans-serif;
+    background-color: #FBC1F5;
+    width: 90%;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+}
+
+header{
+  background-image: url(/home/wtc/ForHer/html/images.png);
+  background-position: center;
+  font-family: 'Times New Roman', Times, serif;
+  height: 100px;
+  font-size: x-large;
+
+
+}
+
+h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#611B63, #eee);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro{
+
+  font-size: xx-large;
+  
+}
+
+.nav {
+    font-family: 'Lato', sans-serif;
+    background-image: url("/home/wtc/ForHer/html/weare.jpg");
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+
+
+.chat {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #FBC1F5; */
+  background-image: url("/home/wtc/ForHer/html/weare.jpg");
+}
+
+.chatty{
+  font-size: x-large;
+}
+#chat-container {
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid #DA42BB;
+  padding: 10px;
+  background-color: #DA42BB;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#chat-messages {
+  height: 300px;
+  overflow-y: scroll;
+}
+#user-input {
+  width: 100%;
+}
+
+footer{
+  background-image: url(/home/wtc/ForHer/html/images.png);
+  background-position: center;
+  height: 100px;
+  text-align: center;
+}
+
+form {
+  padding: 20px;
+  width: 33%;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  text-align: center;
+  display: inline-block;
+}
+
+
+form.inline {
+  padding: 0;
+  width:33%;
+  background-color: #fff;
+  text-align: center;
+}
+
+input.inline[type=submit] {
+  width: 100%;
+  background-color: #DA42BB;
+  color: white;
+  padding: 4px;
+  margin: 2px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #DA42BB;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #5E2235;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+nav a {
+    display: block;
+    padding: 5px 15px;
+    text-align: center;
+    color: #464141;
+}
+
+nav a:hover {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+table {
+    table-layout: fixed;
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+td {
+    padding: 1em;
+    text-align: left;
+}
+
+th {
+    padding: 1em;
+    text-align: left;
+    text-decoration: underline;
+}
+
+tfoot {
+    border-top: 1px solid black;
+    font-size: large;
+    font-weight: bold;
+}
+
+div.error {
+    border: 1px solid #888;
+    padding: 20px;
+    margin: 20;
+    color: red;
+    width: 60%;
+}
+
+div.stacktrace {
+    font-size: small;
+    font-family: monospace;
+}

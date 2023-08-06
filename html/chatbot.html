@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Chatbot</title>
+  <meta charset="UTF-8">
+  <!-- <title>ForHer</title> -->
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- <style>
+    /* Basic styling for the chat window */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    #chat-container {
+      width: 300px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #chat-messages {
+      height: 300px;
+      overflow-y: scroll;
+    }
+    #user-input {
+      width: 100%;
+    }
+  </style> -->
+</head>
+<body class="chat">
+    <header>
+        <h1><a href="index.html">ForHer</a></h1>
+    </header>
+
+    <h1 class="chatty">Chatbot</h1>
+  <div id="chat-container">
+    <div id="chat-messages"></div>
+    <input type="text" id="user-input" placeholder="Type your message...">
+  </div>
+
+  <script>
+    const chatMessages = document.getElementById("chat-messages");
+    const userInput = document.getElementById("user-input");
+
+    function addMessage(message, sender) {
+      const messageDiv = document.createElement("div");
+      messageDiv.className = sender;
+      messageDiv.innerText = message;
+      chatMessages.appendChild(messageDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function processUserInput() {
+      const userMessage = userInput.value.trim();
+      if (userMessage) {
+        addMessage(userMessage, "user");
+        respondToUser(userMessage);
+        userInput.value = "";
+      }
+    }
+
+    function respondToUser(userMessage) {
+      const responses = {
+        "hello": "Hello! How can I help you?",
+        "how are you": "I'm just a chatbot, but I'm here to assist!",
+        "bye": "Goodbye! Have a great day!",
+        "exit": "Goodbye! Have a great day!",
+        "quit": "Goodbye! Have a great day!",
+        "default": "I'm not sure how to respond to that."
+      };
+
+      const response = responses[userMessage.toLowerCase()] || responses["default"];
+      addMessage(response, "bot");
+    }
+
+    userInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        processUserInput();
+      }
+    });
+  </script>
+</body>
+</html>
